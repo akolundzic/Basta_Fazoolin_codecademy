@@ -4,7 +4,7 @@ class Menu:
 # 1 add motto to class
   motto = "At Basta Fazoolin’ with my Heart our motto is simple: when you’re here with family, that’s great! We have four different menus: brunch, early-bird, dinner, and kids."
 
-# 3 create first menu
+# 3 brunch menu
   brunch ={ 'pancakes': 7.50, 'waffles': 9.00, 'burger': 11.00, 'home fries': 4.50, 'coffee': 1.50, 'espresso': 3.00, 'tea': 1.00, 'mimosa': 10.50, 'orange juice': 3.50
 }
 
@@ -52,7 +52,9 @@ class Menu:
     for dish in purchased_items:
         sum += obj.get(dish,0)
     return round(sum,1)
-    
+  
+  def info_for_customer(self,itemlist):
+    return f"You have ordered {len(itemlist)} dishes:\n{','.join(itemlist)}"
   # get menu list
   def get_menulist(self):
     dic_menu = {'early_bird':self.early_bird,'dinner':self.dinner,'kids':self.kids,'brunch':self.brunch}
@@ -109,13 +111,16 @@ class Business:
 
 # 10 test for brunch
 brunch_menu = Menu('brunch',11,15)
+print(brunch_menu.motto)
 brunch_items = ['pancakes', 'home','coffee']
-print(brunch_menu.calculate_bill(brunch_items))
+print(brunch_menu.info_for_customer(brunch_items))
+print(f"Total amount is: {brunch_menu.calculate_bill(brunch_items)}€\n")
 
 # 11 test for early bird
 early_bird = Menu('early_bird',15,23)
 early_bird_items = ['salumeria plate','mushroom ravioli (vegan)']
-print(early_bird.calculate_bill(early_bird_items))
+print(early_bird.info_for_customer(early_bird_items))
+print(f"Total amount is: {early_bird.calculate_bill(early_bird_items)}€\n")
 
 # 14 create two flagships, get all menus
 flagship_store = Franchise("1232 West End Road",early_bird)
