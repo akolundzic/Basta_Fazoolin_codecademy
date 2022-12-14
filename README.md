@@ -1,5 +1,5 @@
 # Basta Fazoolin'Codecademy
-This is an implementation of an exersice from the codecadeym Python3 course. This is my own suggestions might deviate from the steps suggested in this exersice. 
+This is an implementation of an exersice from the codecadeym Python3 course. This is my own suggestion and might deviate from the steps suggested in this exersice in some cases. But you are welcome for any other suggestions.
 ## Description
 You’ve started a position as the lead programmer for the family-style Italian restaurant Basta Fazoolin’ with My Heart. The restaurant has been doing fantastically and seen a lot of growth lately. You’ve been hired to keep things organized.
 ### suggested steps
